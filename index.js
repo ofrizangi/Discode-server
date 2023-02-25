@@ -27,6 +27,12 @@ const user_routes = require('./routes/user_routes');
 app.use('/api/users', user_routes)
 
 
+const level_routes = require('./routes/level_routes');
+app.use('/api', level_routes)
+
+const game_routes = require('./routes/game_routes');
+app.use('/api/games', game_routes)
+
 /*
 Just for testing - earase me later
 */

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const validator = require('validator');
 
-const dataSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     _id: {
         required: true,
         type: String
@@ -23,7 +23,8 @@ const dataSchema = new mongoose.Schema({
         type: String,
         validate: [validator.isEmail, 'invalid email'],
         unique: true // unique is not working
-    }
+    },
+    levels: [{type: mongoose.Schema.Types.ObjectId, ref: "Level"}]
 })
 
-module.exports = mongoose.model('User', dataSchema)
+module.exports = mongoose.model('User', userSchema)

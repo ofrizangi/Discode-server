@@ -1,0 +1,4 @@
+[
+    {"game_name" : "robotDesigner" , "number_of_levels" : 1},
+    {"game_name" : "maze" , "number_of_levels" : 5}
+]

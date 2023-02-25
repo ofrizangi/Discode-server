@@ -10,6 +10,7 @@ const jwt = require("jsonwebtoken");
 
 const UserModel = require('../models/user');
 
+const {initialize_levels} = require('../service/level_service')
 
 var passwordValidator = require('password-validator');
 
@@ -43,6 +44,7 @@ router.post('/register', async (req, res) => {
             // encrrypt password before storing it in the DB
             user_data.password = await bcrypt.hash(user_data.password, 10);
             await user_data.save();
+            initialize_levels(user_data._id)
             res.status(200).json({token: token})
         }
         catch (error) {
@@ -60,7 +62,7 @@ router.post('/login', async (req, res) => {
         }
         // compare encrtpted password - every string have the same uniqu hashed value
         else if(await bcrypt.compare(req.body.password , user_data.password)){
-            // defining the expiression and the 
+            // generate token
             const token = jwt.sign(
                 { user_id: user_data._id },
                 process.env.TOKEN_KEY,
@@ -92,7 +94,7 @@ for testing token - delete me later!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const auth = require("../middleware/auth")
 
 router.post("/welcome", auth, (req, res) => {
-    console.log(req.user)
+    console.log(req.userId)
     res.status(200).send("Welcome 🙌 ")
 });
 

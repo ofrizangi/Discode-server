@@ -9,7 +9,7 @@ const verify_token = (req, res, next) => {
   try {
     token = token.replace(/^Bearer\s+/, "")
     const decoded = jwt.verify(token,  process.env.TOKEN_KEY)
-    req.user = decoded;
+    req.userId = decoded; //saving userId inside req
   } catch (err) {
     return res.status(401).send("Invalid Token")
   }

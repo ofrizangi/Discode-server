@@ -33,6 +33,9 @@ app.use('/api', level_routes)
 const game_routes = require('./routes/game_routes');
 app.use('/api/games', game_routes)
 
+const forum_routes = require('./routes/forum_routes');
+app.use('/api', forum_routes)
+
 /*
 Just for testing - earase me later
 */

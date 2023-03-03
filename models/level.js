@@ -21,9 +21,7 @@ const levelSchema = new mongoose.Schema({
         required: true,
         type: Boolean
     },
-    solution: {
-        type: String
-    },
+    solution: [{type: mongoose.Schema.Types.ObjectId, ref: "Command_row"}], 
     user: {type: mongoose.Schema.Types.String, ref: "User"}
 })
 

@@ -43,8 +43,8 @@ router.post('/register', async (req, res) => {
         try {
             // encrrypt password before storing it in the DB
             user_data.password = await bcrypt.hash(user_data.password, 10);
-            await user_data.save();
-            initialize_levels(user_data._id)
+            const user = await user_data.save();
+            initialize_levels(user)
             res.status(200).json({token: token})
         }
         catch (error) {

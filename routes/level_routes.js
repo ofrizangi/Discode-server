@@ -24,7 +24,7 @@ router.get('/:gameName/levels/getAll', auth, async (req, res) => {
 //Get one Method
 router.get('/:gameName/levels/getOne/:levelNumber', auth, async (req, res) => {
     try{
-        const data = await LevelModel.find({"game_name" : req.params.gameName, "user" : req.userId.user_id, "level_number" : req.params.levelNumber})
+        const data = await LevelModel.find({"game_name" : req.params.gameName, "user" : req.userId.user_id, "level_number" : req.params.levelNumber}).populate('solution')
         res.json(data)
     }
     catch(error){

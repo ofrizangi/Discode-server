@@ -10,7 +10,7 @@ const games = require('../games_information.json')
 
 
 //Get all Method
-router.get('/getAll', auth, async (req, res) => {
+router.get('/getAll', auth, (req, res) => {
     try{
         var stringGames = JSON.stringify(games)
         var myGames = JSON.parse(stringGames)
@@ -19,6 +19,27 @@ router.get('/getAll', auth, async (req, res) => {
             gameList[game_num] = myGames[game_num].game_name
         }
         res.json(gameList)
+    }
+    catch(error){
+        res.status(500).json({message: error.message})
+    }
+})
+
+
+
+const {get_blocks} = require('../service/block_service')
+
+//Get a game blocks
+router.get('/get/:gameName/blocks', auth, async (req, res) => {
+    try {
+        var stringGames = JSON.stringify(games)
+        var myGames = JSON.parse(stringGames)        
+        for (let game_num = 0 ; game_num < myGames.length ; game_num++){
+            if(req.params.gameName === myGames[game_num].game_name){
+                res.status(200).json(await get_blocks(myGames[game_num].blocks))
+                break
+            }
+        }
     }
     catch(error){
         res.status(500).json({message: error.message})

@@ -2,20 +2,14 @@
 const mongoose = require('mongoose');
 
 const commandSchema = new mongoose.Schema({
-    row_number: {
-        required: true,
-        type: Number
-    },
+    block : {type: mongoose.Schema.Types.String, ref: "Block", required: true},
 
-    nesting_level : {
-        type: Number
-    },
+    arguments: {type: Array, "default" : []},
 
-    arguments: {type: Array, "default" : []}, 
+    level: {type: mongoose.Schema.Types.ObjectId, ref: "Level"},
 
-    block : {type: mongoose.Schema.Types.ObjectId, ref: "Block"},
+    inner_blocks: [{type: mongoose.Schema.Types.ObjectId, ref: "Command_row"}],
 
-    level: {type: mongoose.Schema.Types.ObjectId, ref: "Level"}
 })
 
 module.exports = mongoose.model('Command_row', commandSchema)

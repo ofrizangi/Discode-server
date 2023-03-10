@@ -32,10 +32,17 @@ async function initialize_levels(user) {
             user.levels.push(level)
             await user.save()
             
-            await initialize_row_command(level, game_num, myGames)
+            // await initialize_row_command(level, game_num, myGames)
         }
     }
 }
+
+
+
+
+/*
+command_row list in every level is initialize to be empty,
+so this function is irelevent
 
 async function initialize_row_command(level, game_num, myGames) {
     let level_id = level._id
@@ -51,5 +58,7 @@ async function initialize_row_command(level, game_num, myGames) {
         await level.save()
     }
 }
+
+*/
 
 module.exports = {initialize_levels};

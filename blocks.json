@@ -1,4 +1,0 @@
-[
-    {"_id" : "turn", "color" : "lightblue", "arguments_type" : ["boolean" , "string"], "complex" : false},
-    {"_id" : "move", "color" : "yellow", "arguments_type" : ["boolean" , "string"], "complex" : true}
-]

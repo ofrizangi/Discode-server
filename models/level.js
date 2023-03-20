@@ -22,6 +22,10 @@ const levelSchema = new mongoose.Schema({
         type: Boolean
     },
     solution: [{type: mongoose.Schema.Types.ObjectId, ref: "Command_row"}], 
+    max_number_of_rows : {
+        required: true,
+        type: Number
+    },
     user: {type: mongoose.Schema.Types.String, ref: "User"}
 })
 

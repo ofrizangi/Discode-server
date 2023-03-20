@@ -10,6 +10,8 @@ const commandSchema = new mongoose.Schema({
 
     inner_blocks: [{type: mongoose.Schema.Types.ObjectId, ref: "Command_row"}],
 
+    outer_block: {type: mongoose.Schema.Types.ObjectId, ref: "Command_row" , default: null}
+
 })
 
 module.exports = mongoose.model('Command_row', commandSchema)

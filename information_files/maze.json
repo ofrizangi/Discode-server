@@ -1,0 +1,7 @@
+[
+    {"level_number" : 1 , "maximum_number_of_rows": 10},
+    {"level_number" : 2 , "maximum_number_of_rows": 10},
+    {"level_number" : 3 , "maximum_number_of_rows": 10},
+    {"level_number" : 4 , "maximum_number_of_rows": 10},
+    {"level_number" : 5 , "maximum_number_of_rows": 10}
+]

@@ -2,7 +2,7 @@
 
 const BlockModel = require('../models/block');
 
-const blocks = require('../blocks.json')
+const blocks = require('../information_files/blocks.json')
 
 
 /*
@@ -18,7 +18,9 @@ async function initialize_blocks() {
         const block_data = new BlockModel({
             _id: myBlocks[block_num]._id ,
             color : myBlocks[block_num].color,
-            arguments_type: myBlocks[block_num].arguments_type
+            arguments_type: myBlocks[block_num].arguments_type,
+            complex: myBlocks[block_num].complex,
+            description: myBlocks[block_num].description
         })
         await block_data.save()
     }

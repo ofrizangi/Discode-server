@@ -1,4 +1,4 @@
-const games = require('../games_information.json')
+const games = require('../information_files/games.json')
 
 const LevelModel = require('../models/level');
 
@@ -15,24 +15,27 @@ async function initialize_levels(user) {
     var stringGames = JSON.stringify(games)
     var myGames = JSON.parse(stringGames)
     for (let game_num = 0 ; game_num < myGames.length ; game_num++) {
-        let number_of_levels = myGames[game_num].number_of_levels
-        let locked = false
-        for(let i = 1; i <= number_of_levels; i++){
-            if( i === 2){
+
+        const levels = require(`../information_files/${myGames[game_num].game_name}.json`)
+        var stringLevels = JSON.stringify(levels)
+        var myLevels = JSON.parse(stringLevels)
+
+        var locked = false
+        for(let i = 0; i < myLevels.length; i++) {
+            if(i === 1){
                 locked = true
             }
             const leval_data = new LevelModel({
                 game_name: myGames[game_num].game_name ,
-                level_number : i,
+                level_number : myLevels[i].level_number,
                 solved: false,
                 locked: locked,
-                user: user_id
+                user: user_id,
+                max_number_of_rows : myLevels[i].maximum_number_of_rows
             })
             const level = await leval_data.save();
             user.levels.push(level)
             await user.save()
-            
-            // await initialize_row_command(level, game_num, myGames)
         }
     }
 }

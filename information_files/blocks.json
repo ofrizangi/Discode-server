@@ -1,0 +1,5 @@
+[
+    {"_id" : "turn", "description": "turn <arg> by <arg>", "color" : "lightblue", "arguments_type" : [["left" , "right"] , "int"], "complex" : false},
+    {"_id" : "move", "description": "move <arg>", "color" : "yellow", "arguments_type" : [["forward", "backward"]], "complex" : false},
+    {"_id" : "repeat", "description": "repeat <arg> times" ,"color" : "lightgreen", "arguments_type" : ["int"], "complex" : true}
+]

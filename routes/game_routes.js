@@ -6,7 +6,7 @@ module.exports = router;
 
 const auth = require("../middleware/auth")
 
-const games = require('../games_information.json')
+const games = require('../information_files/games.json')
 
 
 //Get all Method

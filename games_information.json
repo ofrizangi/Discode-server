@@ -1,4 +1,0 @@
-[
-    {"game_name" : "robotDesigner" , "number_of_levels" : 1, "number_of_rows" : 10, "blocks" : ["turn"]},
-    {"game_name" : "maze" , "number_of_levels" : 5 , "number_of_rows": 10 , "blocks" : ["turn", "move"]}
-]

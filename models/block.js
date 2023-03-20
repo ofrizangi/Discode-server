@@ -7,6 +7,10 @@ const blockSchema = new mongoose.Schema({
         required: true,
         type: String
     },
+    description: {
+        required: true,
+        type: String
+    },
     color: {
         required: true,
         type: String 

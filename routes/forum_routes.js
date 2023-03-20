@@ -10,7 +10,7 @@ const AnswerModel = require('../models/answer');
 
 const auth = require("../middleware/auth")
 
-const games = require('../games_information.json')
+const games = require('../information_files/games.json')
 
  
 router.post('/:gameName/forum/postQuestion', auth, async (req, res) => {

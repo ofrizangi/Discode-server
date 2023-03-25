@@ -31,7 +31,8 @@ async function initialize_levels(user) {
                 solved: false,
                 locked: locked,
                 user: user_id,
-                max_number_of_rows : myLevels[i].maximum_number_of_rows
+                max_number_of_rows : myLevels[i].maximum_number_of_rows,
+                blocks: myLevels[i].blocks
             })
             const level = await leval_data.save();
             user.levels.push(level)

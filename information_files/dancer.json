@@ -1,0 +1,10 @@
+[
+    {"level_number" : 1 , "maximum_number_of_rows": 10, "blocks" : ["swing", "jump" , "cartwheel"]},
+    {"level_number" : 2 , "maximum_number_of_rows": 10, "blocks" : ["turn", "stomp" , "shrink"]},
+    {"level_number" : 3 , "maximum_number_of_rows": 10, "blocks" : ["repeat", "cartwheel"]},
+    {"level_number" : 4 , "maximum_number_of_rows": 10, "blocks" : ["repeat", "wiggle"]},
+    {"level_number" : 5 , "maximum_number_of_rows": 10, "blocks" : ["repeat", "wiggle", "slide", "stomp"]},
+    {"level_number" : 6 , "maximum_number_of_rows": 10, "blocks" : ["repeat", "shrink", "wiggle"]},
+    {"level_number" : 7 , "maximum_number_of_rows": 10, "blocks" : ["repeat", "if_number_iteration", "slide", "wiggle"]},
+    {"level_number" : 8 , "maximum_number_of_rows": 10, "blocks" : ["repeat", "if_mod_iteration", "slide", "wiggle"]}
+]

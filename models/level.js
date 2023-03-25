@@ -26,6 +26,7 @@ const levelSchema = new mongoose.Schema({
         required: true,
         type: Number
     },
+    blocks : [{type: mongoose.Schema.Types.String, ref: "Block"}],
     user: {type: mongoose.Schema.Types.String, ref: "User"}
 })
 

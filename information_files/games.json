@@ -1,4 +1,4 @@
 [
-    {"game_name" : "robotDancer" , "number_of_levels" : 1, "blocks" : ["turn"]},
-    {"game_name" : "maze" , "number_of_levels" : 5 , "blocks" : ["turn", "move" , "repeat"]}
+    {"game_name" : "dancer"},
+    {"game_name" : "maze"}
 ]

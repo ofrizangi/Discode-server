@@ -27,6 +27,10 @@ router.get('/getAll', auth, (req, res) => {
 
 
 
+
+/*
+currently unrelevent becuase a change in implemetation
+
 const {get_blocks} = require('../service/block_service')
 
 //Get a game blocks
@@ -45,3 +49,6 @@ router.get('/get/:gameName/blocks', auth, async (req, res) => {
         res.status(500).json({message: error.message})
     }
 })
+
+
+*/

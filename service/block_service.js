@@ -27,6 +27,9 @@ async function initialize_blocks() {
 }
 
 
+
+
+/*
 async function get_blocks(block_list){
     let blocks = []
     for (let j= 0; j < block_list.length; j++) {
@@ -35,5 +38,7 @@ async function get_blocks(block_list){
     return blocks
 }
 
+*/
 
-module.exports = {initialize_blocks, get_blocks};
+
+module.exports = {initialize_blocks};

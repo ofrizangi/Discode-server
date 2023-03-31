@@ -22,7 +22,7 @@ async function initialize_levels(user) {
 
         var locked = false
         for(let i = 0; i < myLevels.length; i++) {
-            if(i === 1){
+            if(myLevels[i].level_number === 2){
                 locked = true
             }
             const leval_data = new LevelModel({
@@ -32,7 +32,8 @@ async function initialize_levels(user) {
                 locked: locked,
                 user: user_id,
                 max_number_of_rows : myLevels[i].maximum_number_of_rows,
-                blocks: myLevels[i].blocks
+                blocks: myLevels[i].blocks,
+                description: myLevels[i].description
             })
             const level = await leval_data.save();
             user.levels.push(level)

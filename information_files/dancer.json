@@ -1,4 +1,5 @@
 [
+    {"level_number" : -1 , "description" : "free style" , "maximum_number_of_rows": 100, "blocks" : ["turn", "repeat" , "jump" ,"swing" ,  "cartwheel" , "stomp" , "wiggle" , "shrink" , "slide" , "if_number_iteration" , "if_mod_iteration"]},
     {"level_number" : 1 , "maximum_number_of_rows": 10, "blocks" : ["swing", "jump" , "cartwheel"]},
     {"level_number" : 2 , "maximum_number_of_rows": 10, "blocks" : ["turn", "stomp" , "shrink"]},
     {"level_number" : 3 , "maximum_number_of_rows": 10, "blocks" : ["repeat", "cartwheel"]},

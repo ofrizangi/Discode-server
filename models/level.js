@@ -13,6 +13,9 @@ const levelSchema = new mongoose.Schema({
         required: true,
         type: Number
     },
+    description: {
+        type: String
+    },
     locked: {
         required: true,
         type: Boolean

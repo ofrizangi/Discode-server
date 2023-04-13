@@ -30,7 +30,15 @@ const levelSchema = new mongoose.Schema({
         type: Number
     },
     blocks : [{type: mongoose.Schema.Types.String, ref: "Block"}],
-    user: {type: mongoose.Schema.Types.String, ref: "User"}
+    user: {type: mongoose.Schema.Types.String, ref: "User"},
+    expected_solution:{
+        required: true,
+        type: Array
+    },
+    video_src:{
+        required: true,
+        type: String
+    }
 })
 
 

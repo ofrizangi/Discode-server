@@ -6,6 +6,10 @@ const CommandModel = require('../models/command_row');
 
 const UserModel = require('../models/user');
 
+const fs = require('fs');
+
+const path = require('path');
+
 /*
 The function is called after a new user registered to Discode.
 It adds to the DB all levels in all games.
@@ -33,7 +37,10 @@ async function initialize_levels(user) {
                 user: user_id,
                 max_number_of_rows : myLevels[i].maximum_number_of_rows,
                 blocks: myLevels[i].blocks,
-                description: myLevels[i].description
+                description: myLevels[i].description,
+                expected_solution:myLevels[i].expected_solution,
+                video_src: "https://drive.google.com/uc?export=download&id=" + myLevels[i].video
+
             })
             const level = await leval_data.save();
             user.levels.push(level)
@@ -41,6 +48,7 @@ async function initialize_levels(user) {
         }
     }
 }
+
 
 
 

@@ -16,7 +16,9 @@ router.get('/getAll', auth, (req, res) => {
         var myGames = JSON.parse(stringGames)
         const gameList = []        
         for (let game_num = 0 ; game_num < myGames.length ; game_num++){
-            gameList[game_num] = myGames[game_num].game_name
+            gameList[game_num] ={"game_name": myGames[game_num].game_name,
+                                  "game_img": "https://drive.google.com/uc?export=download&id=" + myGames[game_num].game_img
+                                }
         }
         res.json(gameList)
     }

@@ -35,11 +35,11 @@ async function initialize_levels(user) {
                 solved: false,
                 locked: locked,
                 user: user_id,
-                max_number_of_rows : myLevels[i].maximum_number_of_rows,
+                max_number_of_rows : myLevels[i].max_number_of_rows,
                 blocks: myLevels[i].blocks,
                 description: myLevels[i].description,
                 expected_solution:myLevels[i].expected_solution,
-                video_src: "https://drive.google.com/uc?export=download&id=" + myLevels[i].video
+                video_src: "https://drive.google.com/uc?export=download&id=" + myLevels[i].video_src
 
             })
             const level = await leval_data.save();
@@ -50,6 +50,19 @@ async function initialize_levels(user) {
 }
 
 
+/*
+
+function get_level_data(game_name, level_number) {
+    console.log("hereeeeeeeeeeeeee")
+    const levels = require(`../information_files/${game_name}.json`)
+    var stringLevels = JSON.stringify(levels)
+    var myLevels = JSON.parse(stringLevels)
+    const current_level = myLevels.find(obj => obj.level_number === level_number)
+    current_level.video_src = "https://drive.google.com/uc?export=download&id=" + current_level.video_src
+    return current_level
+}
+
+*/
 
 
 

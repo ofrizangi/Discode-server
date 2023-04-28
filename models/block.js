@@ -7,21 +7,18 @@ const blockSchema = new mongoose.Schema({
         required: true,
         type: String
     },
-    description: {
-        required: true,
-        type: String
-    },
+    description: [{type: String}],
     color: {
         required: true,
         type: String 
     },
     
     complex : {
-        type: Boolean,
+        type: Number,
         required: true
     },
 
-    arguments_type: {type: Array}
+    arguments_type: [{type: Array}]
 })
 
 module.exports = mongoose.model('Block', blockSchema)

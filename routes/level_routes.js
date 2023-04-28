@@ -10,6 +10,9 @@ const auth = require("../middleware/auth")
 
 const {delete_all_level_commands} = require('../service/command_row_service')
 
+// const {get_level_data} = require('../service/level_service')
+
+
 
 //Get all Method
 router.get('/:gameName/levels/getAll', auth, async (req, res) => {
@@ -26,9 +29,9 @@ router.get('/:gameName/levels/getAll', auth, async (req, res) => {
 //Get one Method
 router.get('/:gameName/levels/getOne/:levelNumber', auth, async (req, res) => {
     try{
-        const level_data = await LevelModel.findOne({"game_name" : req.params.gameName, "user" : req.userId.user_id, "level_number" : req.params.levelNumber}).populate('blocks')
+        const current_level = await LevelModel.findOne({"game_name" : req.params.gameName, "user" : req.userId.user_id, "level_number" : req.params.levelNumber}).populate('blocks')
 
-        res.json(level_data)
+        res.json(current_level)
     }
     catch(error){
         res.status(500).json({message: error.message})

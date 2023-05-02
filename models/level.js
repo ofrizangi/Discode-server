@@ -36,8 +36,10 @@ const levelSchema = new mongoose.Schema({
         type: Array
     },
     video_src:{
-        required: true,
         type: String
+    },
+    data:{
+        type: Array
     }
 })
 

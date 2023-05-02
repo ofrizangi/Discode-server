@@ -39,7 +39,8 @@ async function initialize_levels(user) {
                 blocks: myLevels[i].blocks,
                 description: myLevels[i].description,
                 expected_solution:myLevels[i].expected_solution,
-                video_src: "https://drive.google.com/uc?export=download&id=" + myLevels[i].video_src
+                video_src: "https://drive.google.com/uc?export=download&id=" + myLevels[i].video_src,
+                data:myLevels[i].data,
 
             })
             const level = await leval_data.save();

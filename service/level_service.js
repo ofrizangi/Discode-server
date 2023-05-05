@@ -38,10 +38,9 @@ async function initialize_levels(user) {
                 max_number_of_rows : myLevels[i].max_number_of_rows,
                 blocks: myLevels[i].blocks,
                 description: myLevels[i].description,
-                expected_solution:myLevels[i].expected_solution,
-                video_src: "https://drive.google.com/uc?export=download&id=" + myLevels[i].video_src,
                 data:myLevels[i].data,
-
+                expected_solution: myLevels[i].expected_solution,
+                video_src: myLevels[i].video_src
             })
             const level = await leval_data.save();
             user.levels.push(level)

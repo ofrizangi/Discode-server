@@ -13,6 +13,7 @@
     {"_id" : "drive" , "description" : ["drive <arg> steps"] ,"color": "blue", "arguments_type" :[["int"]], "complex": 0},
     {"_id" : "if_number_iteration" , "description" : ["if iteration is <arg>"] ,"color": "burlywood", "arguments_type" : [["int"]], "complex": 1},
     {"_id" : "if_mod_iteration" , "description" : ["if iteration is <arg>"] ,"color": "DarkSalmon", "arguments_type" : [[["odd" , "even"]]], "complex": 1},
-    {"_id" : "if_else_number_iteration" , "description" : ["if iteration is <arg>", "else"] ,"color": "LightSteelBlue", "arguments_type" : [["int"],[]], "complex": 2},
+    {"_id" : "if_else_number_iteration" , "description" : ["if iteration is <arg>", "else"] ,"color": "LightSteelBlue", "arguments_type" : [["int"],[]], "complex": 2}, 
+    {"_id" : "if_else_next_step" , "description" : ["if <arg> is in front", "else"] ,"color": "PapayaWhip", "arguments_type" : [[["star" , "no entry sign", "bomb"]],[]], "complex": 2},
     {"_id" : "if_elif_else_number_iteration" , "description" : ["if iteration is <arg>", "else if iteration is <arg>", "else"] ,"color": "MediumPurple", "arguments_type" : [["int"],["int"],[]], "complex": 3}
 ]

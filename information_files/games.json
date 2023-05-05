@@ -1,4 +1,5 @@
 [
-    {"game_name" : "dancer", "game_img":"1sARyjMUmmb3pxAXQM2T0xq7AWDz_4Bll"},
-    {"game_name" : "starsQuest", "game_img":"1NHhxPmERVBSOo47Ne4jcUm0cMRJk02hz"}
+    {"game_name" : "dancer"},
+    {"game_name" : "starsQuest"},
+    {"game_name" : "coder"}
 ]

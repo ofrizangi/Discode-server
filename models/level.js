@@ -26,7 +26,6 @@ const levelSchema = new mongoose.Schema({
     },
     solution: [{type: mongoose.Schema.Types.ObjectId, ref: "Command_row"}], 
     max_number_of_rows : {
-        required: true,
         type: Number
     },
     blocks : [{type: mongoose.Schema.Types.String, ref: "Block"}],
@@ -40,6 +39,10 @@ const levelSchema = new mongoose.Schema({
     },
     data:{
         type: Array
+    },
+    editor_code:{
+        type:String,
+        default: "// write your code here"
     }
 })
 

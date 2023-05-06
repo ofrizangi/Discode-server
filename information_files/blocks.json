@@ -9,11 +9,13 @@
     {"_id" : "wiggle" , "description" : ["wiggle to the <arg>"] ,"color": "lightseagreen", "arguments_type" : [[["right" , "left"]]], "complex": 0},
     {"_id" : "shrink" , "description" : ["shrink"] ,"color": "lightsteelblue", "arguments_type" : [[]], "complex": 0},
     {"_id" : "slide" , "description" : ["slide to the <arg>"] ,"color": "paleturquoise", "arguments_type" : [[["right" , "left"]]], "complex": 0},
-    {"_id" : "turn" , "description" : ["turn <arg>"] ,"color": "red", "arguments_type" : [[["right" , "left"]]], "complex": 0},
-    {"_id" : "drive" , "description" : ["drive <arg> steps"] ,"color": "blue", "arguments_type" :[["int"]], "complex": 0},
+    {"_id" : "turn" , "description" : ["turn <arg>"] ,"color": "thistle", "arguments_type" : [[["right" , "left"]]], "complex": 0},
+    {"_id" : "drive" , "description" : ["drive <arg> steps"] ,"color": "lightpink", "arguments_type" :[["int"]], "complex": 0},
     {"_id" : "if_number_iteration" , "description" : ["if iteration is <arg>"] ,"color": "burlywood", "arguments_type" : [["int"]], "complex": 1},
     {"_id" : "if_mod_iteration" , "description" : ["if iteration is <arg>"] ,"color": "DarkSalmon", "arguments_type" : [[["odd" , "even"]]], "complex": 1},
-    {"_id" : "if_else_number_iteration" , "description" : ["if iteration is <arg>", "else"] ,"color": "LightSteelBlue", "arguments_type" : [["int"],[]], "complex": 2}, 
-    {"_id" : "if_else_next_step" , "description" : ["if <arg> is in front", "else"] ,"color": "PapayaWhip", "arguments_type" : [[["star" , "no entry sign", "bomb"]],[]], "complex": 2},
+    {"_id" : "if_else_number_iteration" , "description" : ["if iteration is <arg>", "else"] ,"color": "LightSteelBlue", "arguments_type" : [["int"],[]], "complex": 2},
+    {"_id" : "if_else_next_step" , "description" : ["if <arg> is in <arg>", "else"] ,"color": "PapayaWhip", "arguments_type" : [[["star" , "no entry sign", "bomb", "wall"],["front", "left", "right"]],[]], "complex": 2},
+    {"_id" : "if_else_next_step_opertor" , "description" : ["if <arg> is in <arg> <arg> <arg> is in <arg>", "else"] ,"color": "RosyBrown", "arguments_type" : [[["star" , "no entry sign", "bomb", "wall"],["front", "left", "right"],["and", "or"],["star" , "no entry sign", "bomb", "wall"],["front", "left", "right"]],[]], "complex": 2},
+    {"_id" : "if_else_score" , "description" : ["if <arg> is in <arg> <arg> <arg> is in <arg>", "else"] ,"color": "Aquamarine", "arguments_type" : [[["star", "bomb"],["front", "left", "right"],["bigger", "smaller"],["star", "bomb"],["front", "left", "right"]],[]], "complex": 2},
     {"_id" : "if_elif_else_number_iteration" , "description" : ["if iteration is <arg>", "else if iteration is <arg>", "else"] ,"color": "MediumPurple", "arguments_type" : [["int"],["int"],[]], "complex": 3}
 ]

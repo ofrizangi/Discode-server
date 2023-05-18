@@ -1,3 +1,63 @@
 [
-    {"level_number" : 1, "expected_solution" : ["hey"]}
+    {
+        "level_number" : 1, 
+        "data":"Free style level",
+        "editor_code": "function main() {\n\n}"
+    },
+    {
+        "level_number" : 2, 
+        "data":"Print the string 'hello' 100 times (print with space)",
+        "expected_solution" : "function main(){for(let i=0 ; i<100; i++){console.log('hello ');}}",
+        "editor_code": "function main() {\n\n}"
+    },
+    {
+        "level_number" : 3, 
+        "data":"You are given a string, print 'Yes' if it is equal to 'hello' , otherwise print 'No'",
+        "expected_solution" : "function main(string){if(string === 'hello') {console.log('Yes');} else {console.log('No');}}",
+        "editor_code": "function main(string) {\n\n}",
+        "function_arguments" : ["string"]
+    },
+    {
+        "level_number" : 4, 
+        "data":"You are given 3 numbers - the minimum of a range, the maximum of a range and a value. Print 'Yes' if the value is in the range (the range includes the munimum and maximum value), otherwise print 'No'",
+        "expected_solution" : "function main(min, max, value) { if(min < value && value < max){ console.log('Yes');} else { console.log('No');}}",
+        "editor_code": "function main(min, max, value) {\n\n}",
+        "function_arguments" : ["min" , "max" , "value"]
+    },
+    {
+        "level_number" : 5, 
+        "data":"You are given 2 numbers - print their sum",
+        "expected_solution" : "function main(num1, num2) { console.log(num1+num2);}",
+        "editor_code": "function main(num1, num2) {\n\n}",
+        "function_arguments" : ["num1" , "num2"]
+    },
+    {
+        "level_number" : 6, 
+        "data":"You are given an array and an index, if the index is not in the range of the array print 'Error' , otherwise print the the value in this index",
+        "expected_solution" : "function main(index) { const arr = ['chocolate', 'candey' , 'pizza' , 'pasta']; if(index < 0 || index >= arr.length) {console.log('Error');} else {console.log(arr[index]);}}",
+        "editor_code": "function main(index) {\n\tconst arr = ['chocolate', 'candey' , 'pizza' , 'pasta'];\n\n}",
+        "function_arguments" : ["index"]
+    },
+    {
+        "level_number" : 7, 
+        "data":"You are given a length, build an array with numbers from 1 to length",
+        "expected_solution" : "function main(length) { const arr = []; for(let i=1; i<=length; i++){ arr[i] = i;} console.log(arr); }",
+        "editor_code": "function main(length) {\n\n}",
+        "function_arguments" : ["length"]
+    },
+    {
+        "level_number" : 8, 
+        "data":"Use a while loop to print all numbers from one to 100 in jumps of 5",
+        "expected_solution" : "function main() { var count = 5; while(count <=100) {console.log(count); count = count + 5;}}",
+        "editor_code": "function main() {\n\n}"
+    },
+    {
+        "level_number" : 9, 
+        "data":"you recive 2 numbers and a sign that can be '-','+','/','*' . build a calculator using a switch case. If the sign isn't one of those signs print 'Error'",
+        "expected_solution" : "function main(num1,num2,sign) { switch(sign) { case '-': console.log(num1-num2); break; case '+': console.log(num1+num2); break; case '*': console.log(num1*num2); break; case '/': console.log(num1/num2); break; default: console.log('Error');}}",
+        "editor_code": "function main(num1,num2,sign) {\n\n}",
+        "function_arguments" : ["num1", "num2", "sign"]
+    }
+
+
 ]

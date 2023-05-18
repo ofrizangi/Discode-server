@@ -31,18 +31,20 @@ const levelSchema = new mongoose.Schema({
     blocks : [{type: mongoose.Schema.Types.String, ref: "Block"}],
     user: {type: mongoose.Schema.Types.String, ref: "User"},
     expected_solution:{
-        required: true,
-        type: Array
+        type: mongoose.SchemaTypes.Mixed
     },
     video_src:{
         type: String
     },
     data:{
-        type: Array
+        type: mongoose.SchemaTypes.Mixed
     },
     editor_code:{
         type:String,
         default: "// write your code here"
+    },
+    function_arguments:{
+        type: Array
     }
 })
 

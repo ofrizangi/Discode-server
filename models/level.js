@@ -24,12 +24,16 @@ const levelSchema = new mongoose.Schema({
         required: true,
         type: Boolean
     },
-    solution: [{type: mongoose.Schema.Types.ObjectId, ref: "Command_row"}], 
+    solution: [{type: mongoose.SchemaTypes.Mixed, ref: "Command_row"}], 
     max_number_of_rows : {
         type: Number
     },
     blocks : [{type: mongoose.Schema.Types.String, ref: "Block"}],
+
     user: {type: mongoose.Schema.Types.String, ref: "User"},
+
+    last_command_id : {type:Number, required:true},
+
     expected_solution:{
         type: mongoose.SchemaTypes.Mixed
     },
@@ -41,7 +45,7 @@ const levelSchema = new mongoose.Schema({
     },
     editor_code:{
         type:String,
-        default: "// write your code here"
+        default: ""
     },
     function_arguments:{
         type: Array

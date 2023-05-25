@@ -35,6 +35,7 @@ async function initialize_levels(user) {
                 solved: false,
                 locked: locked,
                 user: user_id,
+                last_command_id: 1,
                 max_number_of_rows : myLevels[i].max_number_of_rows,
                 blocks: myLevels[i].blocks,
                 description: myLevels[i].description,
@@ -50,6 +51,17 @@ async function initialize_levels(user) {
         }
     }
 }
+
+
+
+function get_editor_code_initial_value(game_name, level_number){
+    const levels = require(`../information_files/${game_name}.json`)
+    var stringLevels = JSON.stringify(levels)
+    var myLevels = JSON.parse(stringLevels)
+    const level = myLevels.find(obj => obj.level_number === parseInt(level_number))
+    return level.editor_code
+}
+
 
 
 /*
@@ -89,4 +101,4 @@ async function initialize_row_command(level, game_num, myGames) {
 
 */
 
-module.exports = {initialize_levels};
+module.exports = {initialize_levels, get_editor_code_initial_value};

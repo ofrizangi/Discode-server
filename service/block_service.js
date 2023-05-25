@@ -20,7 +20,8 @@ async function initialize_blocks() {
             color : myBlocks[block_num].color,
             arguments_type: myBlocks[block_num].arguments_type,
             complex: myBlocks[block_num].complex,
-            description: myBlocks[block_num].description
+            description: myBlocks[block_num].description,
+            is_game_block : myBlocks[block_num].is_game_block
         })
         await block_data.save()
     }

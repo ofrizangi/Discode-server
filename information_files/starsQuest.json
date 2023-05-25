@@ -10,7 +10,9 @@
             [0,0,0,0,0,0],
             [0,0,0,0,0,0]
             ],
-    "expected_solution":15},
+    "expected_solution":15,
+    "editor_code" : ""},
+
     {"level_number" : 2 ,
     "max_number_of_rows": 10,
     "blocks" : ["drive", "turn"],
@@ -22,7 +24,9 @@
             [0,0,"*",0,0,5],
             [0,"*",0,0,1,"*"]
             ],
-    "expected_solution":15},
+    "expected_solution":15,
+    "editor_code" : ""},
+
     {"level_number" : 3,
     "max_number_of_rows": 3,
     "blocks" : ["repeat", "drive", "turn"],
@@ -34,7 +38,9 @@
             [4,-2,-2,-2,-2,2],
             [3,3,3,3,3,2]
             ],
-    "expected_solution":15},
+    "expected_solution":15,
+    "editor_code" : ""},
+
     {"level_number" : 4,
     "max_number_of_rows": 4,
     "blocks" : ["repeat", "drive", "turn"],
@@ -46,7 +52,9 @@
             [5,5,5,5,5,5],
             [6,6,6,6,6,6]
             ],
-    "expected_solution":15},
+    "expected_solution":15,
+    "editor_code" : ""},
+
     {"level_number" : 5,
     "max_number_of_rows": 10,
     "blocks" : ["repeat", "drive", "turn"],
@@ -58,7 +66,9 @@
             [0,0,0,0,4,4],
             [0,0,0,0,0,4]
             ],
-    "expected_solution":15},
+    "expected_solution":15,
+    "editor_code" : ""},
+
     {"level_number" : 6,
     "max_number_of_rows": 10,
     "blocks" : ["repeat", "drive", "turn"],
@@ -70,7 +80,9 @@
             [4,-4,-4,-4,-4,2],
             [3,3,3,3,3,2]
             ],
-    "expected_solution":15},
+    "expected_solution":15,
+    "editor_code" : ""},
+
     {"level_number" : 7,
     "max_number_of_rows": 10,
     "blocks" : ["repeat", "drive", "turn","if_else_next_step"],
@@ -82,7 +94,9 @@
             ["*",-4,6,6,6,"*"],
             ["*","*","*","*","*","*"]
             ],
-    "expected_solution":15},
+    "expected_solution":15,
+    "editor_code" : ""},
+
     {"level_number" : 8,
     "max_number_of_rows": 10,
     "blocks" : ["repeat", "drive", "turn", "if_else_next_step_opertor"],
@@ -94,7 +108,8 @@
             [0,3,0,0,0,0],
             [0,"*",0,"*",0,"*"]
             ],
-    "expected_solution":15}
+    "expected_solution":15,
+    "editor_code" : ""}
 ]
 
 

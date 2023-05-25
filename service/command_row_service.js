@@ -3,6 +3,7 @@
 const CommandRowModel = require('../models/command_row');
 const BlockModel = require('../models/block');
 const InnerCommandsModel = require('../models/inner_command')
+const LevelModel = require('../models/level')
 
 
 async function delete_inner_commands(deleted_command){
@@ -44,13 +45,21 @@ async function create_command_arguments_array(block_id, complex_number){
 }
 
 async function get_command_in_correct_format(command){
+    const inner_commands = []
+    const commands = command.inner_blocks.map(obj => obj.commands)
+    for(let i=0; i<commands.length; i++){
+        inner_commands[i] = []
+        for(let j=0; j<commands[i].length; j++){
+            inner_commands[i][j] = commands[i][j]._id.id
+        }
+    }
     const level_commnad_obj = {
-        _id: command._id,
+        _id: command._id.id,
         block: command.block,
         arguments: command.arguments,
         level: command.level,
-        inner_blocks: command.inner_blocks.map(obj => obj.commands),
-        outer_block: command.outer_block,
+        inner_blocks: inner_commands,
+        outer_block: command.outer_block === null ? null :command.outer_block.id ,
         outer_block_list_number: command.outer_block_list_number,
     }
     return level_commnad_obj

@@ -1,44 +1,53 @@
 [
     {"level_number" : 1 , "description" : "free style" , "max_number_of_rows": 100, 
-    "blocks" : ["turn_by", "repeat" , "jump" ,"swing" ,  "cartwheel" , "stomp" , "wiggle" , "shrink" , "slide" , "if_number_iteration" , "if_mod_iteration", "if_else_number_iteration", "if_elif_else_number_iteration"],
-    "expected_solution":[] },
+    "blocks" : ["turn_by", "repeat" , "jump" ,"swing" ,  "cartwheel" , "stomp" , "wiggle" , "shrink" , "slide" , "if_number_iteration" , "if_mod_iteration", "if_else_mod_iteration", "if_elif_else_range_iteration"],
+    "expected_solution":[] , "editor_code" : ""},
 
     {"level_number" : 2 , "max_number_of_rows": 5, "blocks" : ["swing", "jump" , "cartwheel"],
     "expected_solution":["swing right", "swing left", "jump with hands", "cartwheel", "jump without hands"], 
-    "video_src":"https://drive.google.com/uc?export=download&id=1_Pcqz7rg0AsgeipPALPdjPLyRXLBAix8"},
+    "video_src":"https://drive.google.com/uc?export=download&id=1_Pcqz7rg0AsgeipPALPdjPLyRXLBAix8" , "editor_code" : ""},
 
     {"level_number" : 3 , "max_number_of_rows": 7, "blocks" : ["slide", "wiggle"],
-    "expected_solution":["turn left 360", "stomp right", "stomp left", "turn left 45", "turn right 45", "shrink", "jump without hands"], 
-    "video_src":"https://drive.google.com/uc?export=download&id=1jfbsQzs4UDwgM8o0O-dKCBtBJxJIpiLX"},
+    "expected_solution":["turn_by left 360", "stomp right", "stomp left", "turn_by left 45", "turn_by right 45", "shrink", "jump without hands"], 
+    "video_src":"https://drive.google.com/uc?export=download&id=1jfbsQzs4UDwgM8o0O-dKCBtBJxJIpiLX" , "editor_code" : ""},
 
     {"level_number" : 4 , "max_number_of_rows": 4, "blocks" : ["turn_by", "stomp" , "shrink", "jump"],
     "expected_solution":["slide left", "wiggle left", "slide right", "wiggle right"] ,
-    "video_src":"https://drive.google.com/uc?export=download&id=1jfbsQzs4UDwgM8o0O-dKCBtBJxJIpiLX"},
+    "video_src":"https://drive.google.com/uc?export=download&id=1jfbsQzs4UDwgM8o0O-dKCBtBJxJIpiLX" , "editor_code" : ""},
 
     {"level_number" : 5 , "max_number_of_rows": 3, "blocks" : ["repeat", "jump", "turn_by"],
-    "expected_solution":["jump with hands", "jump with hands", "jump with hands", "turn left 360"] ,
-    "video_src":"https://drive.google.com/uc?export=download&id=1nYPB4lmctGmTr04j9Si7sjQsTgfaguJx"},
+    "expected_solution":["jump with hands", "jump with hands", "jump with hands", "turn_by left 360"] ,
+    "video_src":"https://drive.google.com/uc?export=download&id=1nYPB4lmctGmTr04j9Si7sjQsTgfaguJx" , "editor_code" : ""},
 
     {"level_number" : 6 , "max_number_of_rows": 6, "blocks" : ["repeat", "shrink", "turn_by", "swing","cartwheel"],
-    "expected_solution":["shrink", "turn left 360", "swing left", "swing right", "turn left 360", "swing left", "swing right", "turn left 360", "swing left", "swing right", "cartwheel"] ,
-    "video_src":"https://drive.google.com/uc?export=download&id=1j8DSW1faZCKWqJGAU4NhUIb7jLnTuWKw"},
+    "expected_solution":["shrink", "turn_by left 360", "swing left", "swing right", "turn_by left 360", "swing left", "swing right", "turn_by left 360", "swing left", "swing right", "cartwheel"] ,
+    "video_src":"https://drive.google.com/uc?export=download&id=1j8DSW1faZCKWqJGAU4NhUIb7jLnTuWKw" , "editor_code" : ""},
 
     {"level_number" : 7 , "max_number_of_rows": 9, "blocks" : ["repeat", "slide", "swing", "stomp"],
     "expected_solution":["slide left", "swing left", "swing right", "swing left", "swing right", "slide right", "slide right", "stomp left", "stomp right", "stomp left", "stomp right"] 
-    ,"video_src":"https://drive.google.com/uc?export=download&id=17I8Sg0-xJBKY4Tv5Ux2faNWT3411Oogw/view"},
+    ,"video_src":"https://drive.google.com/uc?export=download&id=17I8Sg0-xJBKY4Tv5Ux2faNWT3411Oogw/view" , "editor_code" : ""},
 
     {"level_number" : 8 , "max_number_of_rows": 8, "blocks" : ["repeat", "cartwheel", "slide","shrink","jump"],
     "expected_solution":["cartwheel", "slide left", "shrink", "slide right", "shrink", "slide left", "shrink", "slide right", "shrink", "jump with hands", "cartwheel", "slide left", "shrink", "slide right", "shrink", "slide left", "shrink", "slide right", "shrink", "jump with hands", "cartwheel", "slide left", "shrink", "slide right", "shrink", "slide left", "shrink", "slide right", "shrink", "jump with hands"] ,
-    "video_src":"https://drive.google.com/uc?export=download&id=1gbazGrBXkE8BVGocrDoudvMekl-DG_Ej"},
+    "video_src":"https://drive.google.com/uc?export=download&id=1gbazGrBXkE8BVGocrDoudvMekl-DG_Ej" , "editor_code" : ""},
 
     {"level_number" : 9 , "max_number_of_rows": 10, "blocks" : ["repeat", "jump", "turn_by", "cartwheel","stomp","wiggle"],
-    "expected_solution":["jump with hands", "turn left 45", "turn right 45", "turn left 45", "turn right 45", "cartwheel", "stomp left", "stomp right", "stomp left", "stomp right", "wiggle right", "jump with hands", "turn left 45", "turn right 45", "turn left 45", "turn right 45", "cartwheel", "stomp left", "stomp right", "stomp left", "stomp right", "wiggle right", "jump with hands", "turn left 45", "turn right 45", "turn left 45", "turn right 45", "cartwheel", "stomp left", "stomp right", "stomp left", "stomp right", "wiggle right"] ,
-    "video_src":"https://drive.google.com/uc?export=download&id=1KhqamWf4NzeTP12f6MxNDxCbpeHpDFBN"},
+    "expected_solution":["jump with hands", "turn_by left 45", "turn_by right 45", "turn_by left 45", "turn_by right 45", "cartwheel", "stomp left", "stomp right", "stomp left", "stomp right", "wiggle right", "jump with hands", "turn_by left 45", "turn_by right 45", "turn_by left 45", "turn_by right 45", "cartwheel", "stomp left", "stomp right", "stomp left", "stomp right", "wiggle right", "jump with hands", "turn_by left 45", "turn_by right 45", "turn_by left 45", "turn_by right 45", "cartwheel", "stomp left", "stomp right", "stomp left", "stomp right", "wiggle right"] ,
+    "video_src":"https://drive.google.com/uc?export=download&id=1KhqamWf4NzeTP12f6MxNDxCbpeHpDFBN" , "editor_code" : ""},
 
     {"level_number" : 10 , "max_number_of_rows": 10, "blocks" : ["repeat", "if_number_iteration", "wiggle"],
-    "expected_solution":["wiggle left", "wiggle right"], "video_src":"https://drive.google.com/uc?export=download&id=1zhAI5Y36ohn3oSTGbwqwefPbzKamJD6I"},
+    "expected_solution":["wiggle left", "wiggle right"], "video_src":"https://drive.google.com/uc?export=download&id=1zhAI5Y36ohn3oSTGbwqwefPbzKamJD6I" , "editor_code" : ""},
 
     {"level_number" : 11 , "max_number_of_rows": 9, "blocks" : ["repeat", "if_mod_iteration", "slide", "stomp", "jump", "wiggle","shrink"],
     "expected_solution":["slide right", "wiggle right", "shrink", "slide left", "stomp left", "jump with hands", "slide right", "wiggle right", "shrink", "slide left", "stomp left", "jump with hands"] ,
-    "video_src":"https://drive.google.com/uc?export=download&id=18bX1tLAbrT1VOtbcSynCdqP1-g_5Ucdz"}
+    "video_src":"https://drive.google.com/uc?export=download&id=18bX1tLAbrT1VOtbcSynCdqP1-g_5Ucdz" , "editor_code" : ""},
+
+    {"level_number" : 12 , "max_number_of_rows": 4, "blocks" : ["repeat", "if_else_mod_iteration", "jump","turn_by"],
+    "expected_solution":["turn_by left 180", "jump without hands", "turn_by left 180", "jump without hands", "turn_by left 180",  "jump without hands","turn_by left 180", "jump without hands","turn_by left 180", "jump without hands"] ,
+    "video_src":"https://drive.google.com/uc?export=download&id=1ij_AxnXBaKMFMUsHt7hCugHpktbt9X2w" , "editor_code" : ""},
+
+    {"level_number" : 13 , "max_number_of_rows": 5, "blocks" : ["repeat", "if_elif_else_range_iteration", "swing" , "stomp" , "shrink"],
+    "expected_solution":["swing right" , "swing right", "swing right", "shrink", "shrink", "shrink", "stomp right" , "stomp right" , "stomp right"] ,
+    "video_src":"https://drive.google.com/uc?export=download&id=1SIRi3UrthAZV3irxQUMvKj2PEIW2v0GW", "editor_code" : ""}
+
 ]

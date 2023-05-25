@@ -18,7 +18,11 @@ const blockSchema = new mongoose.Schema({
         required: true
     },
 
-    arguments_type: [{type: Array}]
+    arguments_type: [{type: Array}],
+
+    is_game_block : {
+        type: Boolean
+    }
 })
 
 module.exports = mongoose.model('Block', blockSchema)

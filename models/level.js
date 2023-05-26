@@ -37,6 +37,9 @@ const levelSchema = new mongoose.Schema({
     expected_solution:{
         type: mongoose.SchemaTypes.Mixed
     },
+    best_score:{
+        type: Number
+    },
     video_src:{
         type: String
     },

@@ -78,3 +78,14 @@ router.patch('/:gameName/levels/postCode/:levelNumber', auth, async (req, res) =
         res.status(500).json({message: error.message})
     }
 })
+
+//Post best score
+router.patch('/:gameName/levels/postBestScore/:levelNumber', auth, async (req, res) => {
+    try {
+        const new_data = await LevelModel.findOneAndUpdate({"game_name" : req.params.gameName, "user" : req.userId.user_id, "level_number" : req.params.levelNumber}, {best_score: req.body.best_score}, {new: true})
+        res.status(200).json(new_data)
+    }
+    catch(error) {
+        res.status(500).json({message: error.message})
+    }
+})

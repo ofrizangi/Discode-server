@@ -43,7 +43,8 @@ async function initialize_levels(user) {
                 expected_solution: myLevels[i].expected_solution,
                 video_src: myLevels[i].video_src,
                 editor_code: myLevels[i].editor_code,
-                function_arguments : myLevels[i].function_arguments
+                function_arguments : myLevels[i].function_arguments,
+                best_score: myLevels[i].best_score,
             })
             const level = await leval_data.save();
             user.levels.push(level)

@@ -15,10 +15,17 @@ const {initialize_levels} = require('../service/level_service')
 var passwordValidator = require('password-validator');
 
 // the password must have at least 8 cheracters, less the 30 charecters, 2 digits, no spaces
-const valid_password = new passwordValidator().min(8, "Password should be at least 8 charachters long").
-                                                max(30, "Password should be be a maximum of 30 characters long").
-                                                has().digits(2, "Password should have at least 2 digits").
-                                                has().not().spaces(1, "Password should not have spaces")
+const valid_password = new passwordValidator().min(8, "Password should be at least 8 charachters long.\n").
+                                                max(30, "Password should be be a maximum of 30 characters long.\n").
+                                                has().digits(2, "Password should have at least 2 digits.\n").
+                                                has().not().spaces(1, "Password should not have spaces.\n")
+
+const replacements = {
+    'User validation failed:': '',
+    '_id:': '',
+    'age:': '',
+    'email:': '',
+};
 
 // register
 router.post('/register', async (req, res) => {
@@ -26,7 +33,11 @@ router.post('/register', async (req, res) => {
     if(errors_list.length != 0){
         errors_list = errors_list.map(item => {return item.message})
         res.status(400).json({message: errors_list})
-    } else {
+    }
+    else if(req.body.password !== req.body.confirm_password){
+        res.status(400).json({message: "passwords doesn't match"})
+    }
+    else {
         const user_data = new UserModel({
             _id: req.body.name,
             age: req.body.age,
@@ -48,7 +59,15 @@ router.post('/register', async (req, res) => {
             res.status(200).json({token: token})
         }
         catch (error) {
-            res.status(400).json({message: error.message})
+            if(error.code === 11000){
+                feild = Object.keys(error.keyPattern)[0] === "_id" ? "user name" : "email"
+                res.status(400).json({message: `this ${feild} already exist, please provide another one`})
+            }
+            else {
+                const regex = new RegExp(Object.keys(replacements).join('|'), 'gi');
+                error.message = error.message.replace(regex, match => replacements[match]);
+                res.status(400).json({message: error.message})
+            }
         }
     }
 })

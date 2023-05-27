@@ -177,11 +177,10 @@ router.delete('/:gameName/levels/:levelNumber/deleteCommand/:index', auth, async
     try{
 
         const level = await LevelModel.findOne({"game_name" : req.params.gameName, "user" : req.userId.user_id, "level_number" : req.params.levelNumber})
-        row_command_id =  level.solution[req.params.index] 
+        row_command =  level.solution[req.params.index] 
         level.solution.splice(req.params.index, 1)
         const new_level = await level.save()
-
-        deleted_command = await CommandRowModel.findByIdAndDelete(row_command_id)
+        deleted_command = await CommandRowModel.findByIdAndDelete(row_command._id)
         await delete_inner_commands(deleted_command)
 
         res.status(200).json(new_level)
@@ -195,14 +194,14 @@ router.delete('/:gameName/levels/:levelNumber/deleteCommand/:index', auth, async
 // delete an inner command
 router.delete('/:gameName/levels/:levelNumber/deleteInnerCommand/:index', auth, async (req, res) => {
     try{
-        const outer_command = await CommandRowModel.findById({id: Number(req.body.outer_row_id), level: Number(req.params.levelNumber), game_name: req.params.gameName})
+        const outer_command = await CommandRowModel.findById({id: Number(req.body.outer_row_id), level: Number(req.params.levelNumber), game_name: req.params.gameName, user : req.userId.user_id})
 
         const outer_command_inner_blocks = await InnerCommandsModel.findById(outer_command.inner_blocks[req.body.list_number])
 
-        const deleted_command_id = outer_command_inner_blocks.commands.splice(req.params.index, 1)
+        const command_to_delete = outer_command_inner_blocks.commands.splice(req.params.index, 1)[0]
         await outer_command_inner_blocks.save()
 
-        const deleted_command = await CommandRowModel.findByIdAndDelete(deleted_command_id)
+        const deleted_command = await CommandRowModel.findByIdAndDelete(command_to_delete._id)
         await delete_inner_commands(deleted_command)
         res.status(200).json(deleted_command)
     }

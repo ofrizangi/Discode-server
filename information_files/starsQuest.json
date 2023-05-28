@@ -1,5 +1,19 @@
-[
-    {"level_number" : 1 ,
+[       {"level_number" : 1 ,
+        "max_number_of_rows": 100,
+        "blocks" : ["drive", "turn","if_else_score"],
+        "data":[
+                [0,2,2,2,2,2],
+                [3,3,3,3,3,3],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0]
+                ],
+        "expected_solution":15,
+        "editor_code" : "",
+        "best_score":0},
+    
+        {"level_number" : 2 ,
     "max_number_of_rows": 10,
     "blocks" : ["drive", "turn","if_else_score"],
     "data":[
@@ -14,7 +28,7 @@
     "editor_code" : "",
     "best_score":0},
 
-    {"level_number" : 2 ,
+    {"level_number" : 3 ,
     "max_number_of_rows": 10,
     "blocks" : ["drive", "turn"],
     "data":[
@@ -29,7 +43,7 @@
     "editor_code" : "",
     "best_score":0},
 
-    {"level_number" : 3,
+    {"level_number" : 4,
     "max_number_of_rows": 3,
     "blocks" : ["repeat", "drive", "turn"],
     "data":[
@@ -44,7 +58,7 @@
     "editor_code" : "",
     "best_score":0},
 
-    {"level_number" : 4,
+    {"level_number" : 5,
     "max_number_of_rows": 4,
     "blocks" : ["repeat", "drive", "turn"],
     "data":[
@@ -59,7 +73,7 @@
     "editor_code" : "",
     "best_score":0},
 
-    {"level_number" : 5,
+    {"level_number" : 6,
     "max_number_of_rows": 10,
     "blocks" : ["repeat", "drive", "turn"],
     "data":[
@@ -74,7 +88,7 @@
     "editor_code" : "",
     "best_score":0},
 
-    {"level_number" : 6,
+    {"level_number" : 7,
     "max_number_of_rows": 10,
     "blocks" : ["repeat", "drive", "turn"],
     "data":[
@@ -89,7 +103,7 @@
     "editor_code" : "",
     "best_score":0},
 
-    {"level_number" : 7,
+    {"level_number" : 8,
     "max_number_of_rows": 10,
     "blocks" : ["repeat", "drive", "turn","if_else_next_step"],
     "data":[
@@ -104,7 +118,7 @@
     "editor_code" : "",
     "best_score":0},
 
-    {"level_number" : 8,
+    {"level_number" : 9,
     "max_number_of_rows": 10,
     "blocks" : ["repeat", "drive", "turn", "if_else_next_step_opertor"],
     "data":[

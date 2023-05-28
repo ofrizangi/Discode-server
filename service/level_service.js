@@ -26,7 +26,7 @@ async function initialize_levels(user) {
 
         var locked = false
         for(let i = 0; i < myLevels.length; i++) {
-            if(myLevels[i].level_number === 2){
+            if(myLevels[i].level_number === 3){
                 locked = true
             }
             const leval_data = new LevelModel({

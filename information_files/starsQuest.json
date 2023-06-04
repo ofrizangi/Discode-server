@@ -1,6 +1,6 @@
-[       {"level_number" : 1 ,
+[   {"level_number" : 1 ,
         "max_number_of_rows": 100,
-        "blocks" : ["drive", "turn","if_else_score"],
+        "blocks" : ["repeat","drive", "turn", "if_elif_elif_else_next_step", "if_elif_else_next_step","if_else_next_step_opertor","if_score"],
         "data":[
                 [0,2,2,2,2,2],
                 [3,3,3,3,3,3],
@@ -11,11 +11,11 @@
                 ],
         "expected_solution":15,
         "editor_code" : "",
-        "best_score":0},
-    
-        {"level_number" : 2 ,
-    "max_number_of_rows": 10,
-    "blocks" : ["drive", "turn","if_else_score"],
+    "best_score":0},
+
+    {"level_number" : 2 ,
+    "max_number_of_rows": 25,
+    "blocks" : ["drive", "turn"],
     "data":[
             [0,2,2,2,2,2],
             [3,3,3,3,3,3],
@@ -29,17 +29,17 @@
     "best_score":0},
 
     {"level_number" : 3 ,
-    "max_number_of_rows": 10,
+    "max_number_of_rows": 25,
     "blocks" : ["drive", "turn"],
     "data":[
-            [0,2,0,6,3,0],
+            [0,2,0,0,0,0],
             [0,6,0,-4,0,0],
             [-2,-2,1,0,0,0],
-            [0,0,3,4,-4,2],
-            [0,0,"*",0,0,5],
+            [0,0,3,4,-4,0],
+            [0,0,"*",0,0,0],
             [0,"*",0,0,1,"*"]
             ],
-    "expected_solution":15,
+    "expected_solution":11,
     "editor_code" : "",
     "best_score":0},
 
@@ -54,27 +54,12 @@
             [4,-2,-2,-2,-2,2],
             [3,3,3,3,3,2]
             ],
-    "expected_solution":15,
+    "expected_solution":20,
     "editor_code" : "",
     "best_score":0},
 
     {"level_number" : 5,
-    "max_number_of_rows": 4,
-    "blocks" : ["repeat", "drive", "turn"],
-    "data":[
-            [0,1,1,1,1,1],
-            [2,2,2,2,2,2],
-            [3,3,3,3,3,3],
-            [4,4,4,4,4,4],
-            [5,5,5,5,5,5],
-            [6,6,6,6,6,6]
-            ],
-    "expected_solution":15,
-    "editor_code" : "",
-    "best_score":0},
-
-    {"level_number" : 6,
-    "max_number_of_rows": 10,
+    "max_number_of_rows": 6,
     "blocks" : ["repeat", "drive", "turn"],
     "data":[
             [0,4,0,0,0,0],
@@ -84,43 +69,87 @@
             [0,0,0,0,4,4],
             [0,0,0,0,0,4]
             ],
-    "expected_solution":15,
+    "expected_solution":28,
     "editor_code" : "",
     "best_score":0},
 
-    {"level_number" : 7,
-    "max_number_of_rows": 10,
+    {"level_number" : 6,
+    "max_number_of_rows": 12,
     "blocks" : ["repeat", "drive", "turn"],
     "data":[
             [0,1,1,1,1,1],
-            [4,-4,-4,-4,-4,2],
-            [4,-2,6,6,-4,2],
+            [0,-4,-4,-4,-4,2],
+            [4,0,6,6,-4,2],
             [4,-4,6,6,-4,2],
             [4,-4,-4,-4,-4,2],
             [3,3,3,3,3,2]
             ],
-    "expected_solution":15,
+    "expected_solution":52,
+    "editor_code" : "",
+    "best_score":0},
+    
+    {"level_number" : 7,
+    "max_number_of_rows": 13,
+    "blocks" : ["repeat", "drive", "turn", "if_elif_elif_else_next_step"],
+    "data":[
+        [0,3,0,0,4,0],
+        [6,0,1,0,0,4],
+        [0,2,0,0,0,0],
+        [0,1,0,2,0,3],
+        [0,0,6,0,4,0],
+        [0,2,0,0,5,0]
+        ],
+    "expected_solution":20,
     "editor_code" : "",
     "best_score":0},
 
     {"level_number" : 8,
-    "max_number_of_rows": 10,
-    "blocks" : ["repeat", "drive", "turn","if_else_next_step"],
+    "max_number_of_rows": 12,
+    "blocks" : ["repeat", "drive", "turn", "if_else_mod_iteration"],
     "data":[
-            [0,0,"*","*","*","*"],
-            ["*",6,6,6,-4,"*"],
-            ["*",-4,6,-4,6,6,"*"],
-            ["*",6,6,6,-4,"*"],
-            ["*",-4,6,6,6,"*"],
-            ["*","*","*","*","*","*"]
+            [0,1,1,1,1,1],
+            [2,2,2,2,2,2],
+            [3,3,3,3,3,3],
+            [4,4,4,4,4,4],
+            [5,5,5,5,5,5],
+            [0,0,0,0,0,0]
             ],
-    "expected_solution":15,
+    "expected_solution":54,
     "editor_code" : "",
     "best_score":0},
 
     {"level_number" : 9,
-    "max_number_of_rows": 10,
-    "blocks" : ["repeat", "drive", "turn", "if_else_next_step_opertor"],
+    "max_number_of_rows": 7,
+    "blocks" : ["repeat", "drive", "turn", "if_elif_else_next_step_opertor"],
+    "data":[
+            [0,6,2,0,2,0],
+            [6,"*",0,0,"*",0],
+            [0,0,4,1,1,0],
+            [5,"*",6,"*",5,0],
+            [0,3,"*",0,0,3],
+            [0,2,0,1,0,6]
+            ],
+    "expected_solution":15,
+    "editor_code" : "",
+    "best_score":0}, 
+
+    {"level_number" : 10,
+    "max_number_of_rows": 8,
+    "blocks" : ["repeat", "drive", "turn","if_score"],
+    "data":[[0,1,0,0,6,-4],
+        [2,0,5,3,0,4],
+        [0,-4,0,-2,0,1],
+        [-2,0,5,3,-2,6],
+        [0,3,2,0,-4,0],
+        [-2,5,0,6,0,2]
+        ],
+    "expected_solution":25,
+    "editor_code" : "",
+    "best_score":0},
+
+    {"level_number" : 11,
+    "max_number_of_rows": 20,
+    "blocks" : ["repeat", "drive", "turn", "if_score"],
     "data":[
             [0,"*",2,0,2,0],
             [6,3,0,0,"*",0],
@@ -131,7 +160,24 @@
             ],
     "expected_solution":15,
     "editor_code" : "",
+    "best_score":0},
+
+    {"level_number" : 12,
+    "max_number_of_rows": 20,
+    "blocks" : ["repeat", "drive", "turn", "if_score"],
+    "data":[
+        [0,0,"*","*","*","*"],
+        ["*",6,6,6,-4,"*"],
+        ["*",-4,6,-4,6,6,"*"],
+        ["*",6,6,6,-4,"*"],
+        ["*",-4,6,6,6,"*"],
+        ["*","*","*","*","*","*"]
+        ],
+    "expected_solution":15,
+    "editor_code" : "",
     "best_score":0}
+
+
 ]
 
 

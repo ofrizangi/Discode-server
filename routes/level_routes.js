@@ -46,7 +46,7 @@ router.patch('/:gameName/levels/solve/:levelNumber', auth, async (req, res) => {
         const new_data = await LevelModel.findOneAndUpdate({"game_name" : req.params.gameName, "user" : req.userId.user_id, "level_number" : req.params.levelNumber}, {solved: true}, {new: true}) // new = return the updated data
         let next_level = parseInt(req.params.levelNumber) + 1
         await LevelModel.findOneAndUpdate({"game_name" : req.params.gameName, "user" : req.userId.user_id, "level_number" : next_level}, {locked: false})
-        res.status(200).json()
+        res.status(200).json(new_data)
     }
     catch(error){
         res.status(500).json({message: error.message})

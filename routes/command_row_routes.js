@@ -140,7 +140,6 @@ router.post('/:gameName/levels/:levelNumber/postInnerCommand', auth,  async (req
 // swapping a command place
 router.patch('/:gameName/levels/:levelNumber/swapCommand', auth, async (req, res) => {
     try{
-
         const level = await LevelModel.findOne({"game_name" : req.params.gameName, "user" : req.userId.user_id, "level_number" : req.params.levelNumber})
         await level.solution.splice(req.body.dest_index, 0, level.solution.splice(req.body.src_index, 1)[0])
         const new_level = await level.save()
@@ -175,7 +174,6 @@ router.patch('/:gameName/levels/:levelNumber/swapInnerCommand', auth, async (req
 // deleting a command
 router.delete('/:gameName/levels/:levelNumber/deleteCommand/:index', auth, async (req, res) => {
     try{
-
         const level = await LevelModel.findOne({"game_name" : req.params.gameName, "user" : req.userId.user_id, "level_number" : req.params.levelNumber})
         row_command =  level.solution[req.params.index] 
         level.solution.splice(req.params.index, 1)

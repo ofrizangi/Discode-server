@@ -12,7 +12,7 @@
     "video_src":"https://drive.google.com/uc?export=download&id=1jfbsQzs4UDwgM8o0O-dKCBtBJxJIpiLX" , "editor_code" : ""},
     
     {"level_number" : 4 , "max_number_of_rows": 7, "blocks" : ["turn_by", "stomp" , "shrink", "jump"],
-    "expected_solution":["turn_by left 360", "stomp right", "stomp left", "turn_by left 45", "turn_by right 45", "shrink", "jump without hands"] ,
+    "expected_solution":["turn_by left 360", "stomp left", "stomp right", "turn_by left 45", "turn_by right 45", "shrink", "jump without hands"] ,
     "video_src":"https://drive.google.com/uc?export=download&id=1OPdnOmhp2qzY-MPzPOIqNhZu063nq4bP" , "editor_code" : ""},
 
     {"level_number" : 5 , "max_number_of_rows": 3, "blocks" : ["repeat", "jump", "turn_by"],

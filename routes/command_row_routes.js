@@ -18,15 +18,16 @@ router.get('/:gameName/levels/:levelNumber/commands/getAll', auth,  async (req, 
     try {
         const level = await LevelModel.findOne({"game_name" : req.params.gameName, "user" : req.userId.user_id, "level_number" : req.params.levelNumber})
         const level_commands = await CommandRowModel.find({"level" : level._id})
-
-        const level_commands_list = []
-
+  
         // populating the blocks of every level
         for(let i=0;i<level_commands.length;i++){
             await level_commands[i].populate({path: 'block'})
             await level_commands[i].populate({path: 'inner_blocks'})
-            level_commands_list.push(await get_command_in_correct_format(level_commands[i]))
         }
+
+        const level_commands_list = await Promise.all(level_commands.map(async (command) => {
+            return await get_command_in_correct_format(command);}));
+
         res.json(level_commands_list)
     }
     catch (error) {

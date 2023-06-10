@@ -1,6 +1,6 @@
 [   {"level_number" : 1 ,
         "max_number_of_rows": 100,
-        "blocks" : ["drive", "turn", "drive_number_of_steps" , "repeat", "set_number_of_steps","substact_number_of_steps" ,"if_elif_elif_else_next_step","if_elif_else_next_step_or", "if_elif_else_next_step","if_else_next_step_opertor","if_score"],
+        "blocks" : ["drive", "turn", "repeat", "set_number_of_steps","drive_number_of_steps","substact_number_of_steps" , "if_score", "if_else_next_step_opertor", "if_elif_else_next_step", "if_elif_else_next_step_or" ],
         "data":[
                 ["no_data",0,0,0,0,0],
                 [0,0,0,0,0,0],

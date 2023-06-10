@@ -45,22 +45,19 @@ async function create_command_arguments_array(block_id, complex_number){
 }
 
 async function get_command_in_correct_format(command){
-    const inner_commands = []
-    const commands = command.inner_blocks.map(obj => obj.commands)
-    for(let i=0; i<commands.length; i++){
-        inner_commands[i] = []
-        for(let j=0; j<commands[i].length; j++){
-            inner_commands[i][j] = commands[i][j]._id.id
-        }
-    }
+
+    const inner_commands = command.inner_blocks.map(({ commands }) => commands.map(({ _id }) => _id.id))
+
+    const { _id, block, arguments, level, outer_block, outer_block_list_number } = command
+
     const level_commnad_obj = {
-        _id: command._id.id,
-        block: command.block,
-        arguments: command.arguments,
-        level: command.level,
+        _id: _id.id,
+        block,
+        arguments,
+        level,
         inner_blocks: inner_commands,
-        outer_block: command.outer_block === null ? null :command.outer_block.id ,
-        outer_block_list_number: command.outer_block_list_number,
+        outer_block: outer_block === null ? null : outer_block.id,
+        outer_block_list_number
     }
     return level_commnad_obj
 }

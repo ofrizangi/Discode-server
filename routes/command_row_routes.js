@@ -20,6 +20,7 @@ router.get('/:gameName/levels/:levelNumber/commands/getAll', auth,  async (req, 
         const level_commands = await CommandRowModel.find({"level" : level._id})
   
         // populating the blocks of every level
+        console.log(level_commands)
         for(let i=0;i<level_commands.length;i++){
             await level_commands[i].populate({path: 'block'})
             await level_commands[i].populate({path: 'inner_blocks'})

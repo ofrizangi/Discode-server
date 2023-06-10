@@ -1,6 +1,6 @@
 [   {"level_number" : 1 ,
         "max_number_of_rows": 100,
-        "blocks" : ["drive", "turn", "repeat", "set_number_of_steps","drive_number_of_steps","substact_number_of_steps" , "if_score", "if_else_next_step_opertor", "if_elif_else_next_step", "if_elif_else_next_step_or" ],
+        "blocks" : ["drive", "turn", "repeat", "set_number_of_steps","drive_number_of_steps","substact_number_of_steps" , "if_score", "if_else_next_step_or", "if_elif_else_next_step", "if_elif_else_next_step_or" ],
         "data":[
                 ["no_data",0,0,0,0,0],
                 [0,0,0,0,0,0],
@@ -9,7 +9,6 @@
                 [0,0,0,0,0,0],
                 [0,0,0,0,0,0]
                 ],
-        "expected_solution":0,
         "editor_code" : "",
     "best_score":0},
 
@@ -120,7 +119,7 @@
 
     {"level_number" : 9,
     "max_number_of_rows": 12,
-    "blocks" : ["drive", "turn","repeat", "if_elif_else_next_step_opertor"],
+    "blocks" : ["drive", "turn","repeat", "if_elif_else_next_step_or"],
     "data":[
             [0,6,2,0,2,0],
             [6,"*",0,0,"*",0],

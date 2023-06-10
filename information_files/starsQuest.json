@@ -146,8 +146,21 @@
     "expected_solution":25,
     "editor_code" : "",
     "best_score":0},
-
     {"level_number" : 11,
+    "max_number_of_rows": 13,
+    "blocks" : ["drive", "turn", "repeat", "set_number_of_steps","drive_number_of_steps","substact_number_of_steps"],
+    "data":[
+        [0,5,4,3,2,"*"],
+        [6,5,4,3,-2,0],
+        [6,5,4,"*",0,0],
+        [6,5,-2,0,0,0],
+        [6,"*",0,0,0,0],
+        ["*",0,0,0,0,0]
+        ],
+    "expected_solution":50,
+    "editor_code" : "",
+    "best_score":0},
+    {"level_number" : 12,
     "max_number_of_rows": 11,
     "blocks" : ["drive_number_of_steps", "turn", "set_number_of_steps", "repeat", "substact_number_of_steps"],
     "data":[

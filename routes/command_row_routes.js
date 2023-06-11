@@ -20,7 +20,6 @@ router.get('/:gameName/levels/:levelNumber/commands/getAll', auth,  async (req, 
         const level_commands = await CommandRowModel.find({"level" : level._id})
   
         // populating the blocks of every level
-        console.log(level_commands)
         for(let i=0;i<level_commands.length;i++){
             await level_commands[i].populate({path: 'block'})
             await level_commands[i].populate({path: 'inner_blocks'})
@@ -56,11 +55,9 @@ router.post('/:gameName/levels/:levelNumber/postCommand', auth,  async (req, res
             arguments: argumnets_array,
         })
 
-        console.log(command)
 
         const command_saved = await command.save()
 
-        console.log(command_saved)
 
         level.solution.splice(req.body.dest_index, 0, command_saved)
         level.last_command_id += 1
@@ -79,7 +76,6 @@ router.post('/:gameName/levels/:levelNumber/postCommand', auth,  async (req, res
         res.status(200).json(await get_command_in_correct_format(command_saved))
     }
     catch (error) {
-        console.log(error.message)
         res.status(400).json({message: error.message})
     }
 })
@@ -111,7 +107,6 @@ router.post('/:gameName/levels/:levelNumber/postInnerCommand', auth,  async (req
         const command_saved = await new_command.save();
 
         // add me as an inner command to the outer block
-        console.log("adding" , outer_command.inner_blocks[req.body.list_number])
         const inner_commands = await InnerCommandsModel.findById(outer_command.inner_blocks[req.body.list_number])
         inner_commands.commands.splice(req.body.dest_index, 0, command_saved)
         await inner_commands.save()

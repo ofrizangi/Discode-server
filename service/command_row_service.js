@@ -12,7 +12,6 @@ async function delete_inner_commands(deleted_command){
     for(let list_number=0; list_number <complex_number; list_number++){
         const inner_commands = await InnerCommandsModel.findByIdAndDelete(deleted_command.inner_blocks[list_number])
         const commands = inner_commands.commands
-        console.log(commands)
         for(let i=0; i < commands.length; i++ ){
             const new_deleted_command = await CommandRowModel.findByIdAndDelete(commands[i]._id)
             await delete_inner_commands(new_deleted_command)

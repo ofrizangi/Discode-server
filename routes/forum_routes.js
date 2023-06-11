@@ -66,7 +66,6 @@ router.get('/:gameName/forum/getAll', auth, async (req, res) => {
 // router.delete('/:gameName/forum/delete/:id', async(req, res) => {
 //     ForumModel.findByIdAndRemove(req.params.id, function (err, docs) { 
 //         if (err){
-//             console.log(err)
 //             res.status(500).json({message: err.message})
 //         }
 //     else{

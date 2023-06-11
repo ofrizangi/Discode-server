@@ -113,7 +113,6 @@ for testing token - delete me later!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const auth = require("../middleware/auth")
 
 router.post("/welcome", auth, (req, res) => {
-    console.log(req.userId)
     res.status(200).send("Welcome 🙌 ")
 });
 

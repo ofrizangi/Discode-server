@@ -68,7 +68,6 @@ function get_editor_code_initial_value(game_name, level_number){
 /*
 
 function get_level_data(game_name, level_number) {
-    console.log("hereeeeeeeeeeeeee")
     const levels = require(`../information_files/${game_name}.json`)
     var stringLevels = JSON.stringify(levels)
     var myLevels = JSON.parse(stringLevels)

@@ -6,67 +6,74 @@
     },
     {
         "level_number" : 2, 
-        "data":"Print the string 'Discode is fun!' 100 times",
+        "data":"Print the string 'Discode is fun!' 100 times.",
         "expected_solution" : "function main(){for(let i=0 ; i<100; i++){console.log('Discode is fun!');}}",
         "editor_code": "function main() {\n\n}"
     },
     {
         "level_number" : 3, 
-        "data":"You are given a string, print 'Yes' if it is equal to 'hello' , otherwise print 'No'",
+        "data":"You are given a string, print 'Yes' if it is equal to 'hello' , otherwise print 'No'.",
         "expected_solution" : "function main(string){if(string === 'hello') {console.log('Yes');} else {console.log('No');}}",
         "editor_code": "function main(string) {\n\n}",
         "function_arguments" : ["string"]
     },
     {
         "level_number" : 4, 
-        "data":"You are given 3 numbers - the minimum of a range, the maximum of a range and a value. Print 'Yes' if the value is in the range (the range includes the munimum and maximum value), otherwise print 'No'",
+        "data":"You are given three numbers: the minimum value of a range, the maximum value of a range, and a specific value. Print 'Yes' if the value falls within the range (including the minimum and maximum values), otherwise print 'No'.",
         "expected_solution" : "function main(min, max, value) { if(min <= value && value <= max){ console.log('Yes');} else { console.log('No');}}",
         "editor_code": "function main(min, max, value) {\n\n}",
         "function_arguments" : ["min" , "max" , "value"]
     },
     {
         "level_number" : 5, 
-        "data":"You are given 2 numbers, print their sum",
+        "data":"You are given two numbers. Print their sum.",
         "expected_solution" : "function main(num1, num2) { console.log(num1+num2);}",
         "editor_code": "function main(num1, num2) {\n\n}",
         "function_arguments" : ["num1" , "num2"]
     },
     {
         "level_number" : 6, 
-        "data":"You are given an array and an index, if the index is not in the range of the array print 'Error' , otherwise print the the value in this index",
+        "data":"You are given an array and an index. If the index is not within the range of the array, print 'Error'. Otherwise, print the value at this index.",
         "expected_solution" : "function main(index) { const arr = ['chocolate', 'candey' , 'pizza' , 'pasta']; if(index < 0 || index >= arr.length) {console.log('Error');} else {console.log(arr[index]);}}",
         "editor_code": "function main(index) {\n\tconst arr = ['chocolate', 'candey' , 'pizza' , 'pasta'];\n\n}",
         "function_arguments" : ["index"]
     },
     {
         "level_number" : 7, 
-        "data":"You are given a length, build an array with numbers from 0 to length. print it in the end.",
+        "data":"You are given a length. Build an array containing numbers from 0 to the given length (including the length). At the end, print the resulting array.",
         "expected_solution" : "function main(length) { const arr = []; for(let i=0; i<=length; i++){ arr[i] = i;} console.log(arr); }",
         "editor_code": "function main(length) {\n\n}",
         "function_arguments" : ["length"]
     },
     {
         "level_number" : 8, 
-        "data":"You are given an array containing prices of toys you want to do buy, and the amount of money you have. Print ':)' if you can buy all those items with your money, otherwise print ':('" ,
+        "data":"You are given an array containing prices of toys you want to buy, as well as the amount of money you have. Print ':)' if you can afford to buy all those items with your money. Otherwise, print ':('." ,
         "expected_solution" : "function main(money) { const arr = [20, 40 ,50, 70, 5]; var sum = 0; for(let i=0; i<arr.length; i++) {sum = sum + arr[i];} if(sum <= money) {console.log(':)'); } else {console.log(':(');} }",
         "editor_code": "function main(money) {\n\tconst arr = [20, 40 ,50, 70, 5];\n\n}",
         "function_arguments" : ["money"]
     },
     {
         "level_number" : 9, 
-        "data":"Use a while loop to print all numbers from one to 100 in jumps of 5",
+        "data":"Use a while loop to print all numbers from 5 to 100 in jumps of 5.",
         "expected_solution" : "function main() { var count = 5; while(count <=100) {console.log(count); count = count + 5;}}",
         "editor_code": "function main() {\n\n}"
     },
     {
         "level_number" : 10, 
-        "data":"Go over all the numbers from 1 to 10, and print each number i, i times.",
+        "data":"Iterate over all the numbers from 1 to 10 and print the number i, repeated i times.",
         "expected_solution" : "function main() { for(let i=1; i<=10; i++){ for(let j=0; j<i; j++) {console.log(i);}}}",
         "editor_code": "function main() {\n\n}"
     },
     {
         "level_number" : 11, 
-        "data":"you recive 2 numbers and a sign that can be '-','+','/','*' . Build a calculator using a switch case. If the sign isn't one of those signs print 'Error'",
+        "data":"Write a function that takes a string as input and prints the reversed version of the string. At the end, print the resulting string.",
+        "expected_solution" : "function main(string) { let reversedString = ''; for(let i=string.length-1; i>=0; i--){ reversedString += string[i];} console.log(reversedString);}",
+        "editor_code": "function main(string) {\n\n}",
+        "function_arguments" : ["string"]
+    },
+    {
+        "level_number" : 12, 
+        "data":"You receive two numbers and a sign that can be '-', '+', '/', or '*', build a calculator using a switch case. If the sign is not one of those options print 'Error', otherwise print the solution.",
         "expected_solution" : "function main(num1,num2,sign) { switch(sign) { case '-': console.log(num1-num2); break; case '+': console.log(num1+num2); break; case '*': console.log(num1*num2); break; case '/': console.log(num1/num2); break; default: console.log('Error');}}",
         "editor_code": "function main(num1,num2,sign) {\n\n}",
         "function_arguments" : ["num1", "num2", "sign"]

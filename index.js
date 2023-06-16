@@ -44,15 +44,3 @@ app.use('/api', forum_routes)
 
 const row_commands_routes = require('./routes/command_row_routes');
 app.use('/api', row_commands_routes)
-
-
-
-
-/*
-Just for testing - earase me later
-*/
-const routes = require('./routes/routes_for_testing');
-// all endpoints will start with api
-app.use('/api', routes)
-
-

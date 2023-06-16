@@ -99,20 +99,3 @@ router.post('/login', async (req, res) => {
     }
 })
 
-
-
-
-
-
-
-
-
-/*
-for testing token - delete me later!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-*/
-const auth = require("../middleware/auth")
-
-router.post("/welcome", auth, (req, res) => {
-    res.status(200).send("Welcome 🙌 ")
-});
-

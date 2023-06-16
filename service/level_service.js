@@ -33,7 +33,7 @@ async function initialize_levels(user) {
                 game_name: myGames[game_num].game_name ,
                 level_number : myLevels[i].level_number,
                 solved: false,
-                locked: false,
+                locked: locked,
                 user: user_id,
                 last_command_id: 1,
                 max_number_of_rows : myLevels[i].max_number_of_rows,

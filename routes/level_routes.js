@@ -13,8 +13,6 @@ const {delete_all_level_commands} = require('../service/command_row_service')
 const {get_editor_code_initial_value} = require('../service/level_service')
 
 
-// const {get_level_data} = require('../service/level_service')
-
 //Get all Method
 router.get('/:gameName/levels/getAll', auth, async (req, res) => {
     try{
@@ -65,8 +63,6 @@ router.patch('/:gameName/levels/restart/:levelNumber', auth, async (req, res) =>
         res.status(500).json({message: error.message})
     }
 })
-
-
 
 //Post level code editor
 router.patch('/:gameName/levels/postCode/:levelNumber', auth, async (req, res) => {

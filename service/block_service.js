@@ -1,9 +1,6 @@
-
-
 const BlockModel = require('../models/block');
 
 const blocks = require('../information_files/blocks.json')
-
 
 /*
 The function will remove the database at begining of every run, 
@@ -26,20 +23,5 @@ async function initialize_blocks() {
         await block_data.save()
     }
 }
-
-
-
-
-/*
-async function get_blocks(block_list){
-    let blocks = []
-    for (let j= 0; j < block_list.length; j++) {
-        blocks[j] = await BlockModel.findById(block_list[j])
-    }
-    return blocks
-}
-
-*/
-
 
 module.exports = {initialize_blocks};

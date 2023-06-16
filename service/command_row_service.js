@@ -1,9 +1,6 @@
-
-
 const CommandRowModel = require('../models/command_row');
 const BlockModel = require('../models/block');
 const InnerCommandsModel = require('../models/inner_command')
-const LevelModel = require('../models/level')
 
 
 async function delete_inner_commands(deleted_command){
@@ -18,7 +15,6 @@ async function delete_inner_commands(deleted_command){
         }
     }
 }
-
 
 async function delete_all_level_commands(level_id){
     await CommandRowModel.deleteMany({"level" : level_id})

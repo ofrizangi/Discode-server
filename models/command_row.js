@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 
 const commandSchema = new mongoose.Schema({
@@ -13,7 +12,6 @@ const commandSchema = new mongoose.Schema({
     arguments: [{type: Array}],
 
     level: {type: mongoose.Schema.Types.ObjectId, ref: "Level"},
-
 
     //an array that will contain refrences to other blocks
     inner_blocks: [{type: mongoose.Schema.Types.ObjectId, ref: 'Inner_commands' }],
